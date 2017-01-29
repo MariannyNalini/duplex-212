@@ -27,7 +27,7 @@
 		</div>
 		<div class="span3">
 			<div class="cmo-portfolio-detail-wrapper">
-				<div class="cmo-portfolio-meta cmo-portfolio-name">
+				<!--<div class="cmo-portfolio-meta cmo-portfolio-name">
 					<label><?php esc_html_e("Product Name", 'cumulo') ?>:</label>
 					<div><?php the_title() ?></div>
 				</div>
@@ -67,16 +67,18 @@
 						<div><a href="<?php echo esc_url( $str ); ?>" target="_blank"><?php echo esc_html( $str ); ?></a></div>
 					</div>
 				<?php } ?>
+			-->
+				<div><?php the_content() ?></div>
 			</div>
 		</div>
 	</div>
 
-	<div>
+	<!--<div>
 		<div class="cmo-portfolio-desc">
 			<h2><?php esc_html_e("Product Description", 'cumulo') ?>:</h2>
 			<div><?php the_content() ?></div>
 		</div>
-	</div>
+	</div>-->
 
 	<?php if ( cmo_get_page_theme_option( "portfolio_show_related", null ) == 'yes' ) { ?>
 	<div class="cmo-portfolio-similar">

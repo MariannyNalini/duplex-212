@@ -25,6 +25,9 @@ if ( $extlinkMeta ) {
 	$ext_link = trim( $extlinkMeta[0] );
 }
 ?>
+<!-- Init custom portfolio page -->
+<?php if (!is_page( 'Projetos' ) ):?>
+<!-- Init custom portfolio page -->
 <article id="<?php the_ID()?>" <?php post_class( array( "cmo-portfolio-item", "cmo-post-in-list", "cmo-portfolio-width-" . $sizes[0], "cmo-portfolio-height-" . $sizes[1] ) ) ?>>
 	<div class="cmo-portfolio-featured-image-wrapper">
 		<div class="cmo-portfolio-featured-image-bg" style="background-image: url('<?php echo esc_url( $cmo_featured_image ) ?>')" >
@@ -36,6 +39,7 @@ if ( $extlinkMeta ) {
 					</a>
 					<?php } ?>
 					
+
 					<?php if ( !empty( $cmo_featured_image ) ) { ?>
 					<a href="<?php echo esc_url( $cmo_featured_image ) ?>" title="<?php the_title() ?>" data-fancybox-group="portfolio" class="cmo-pfi-external-link fancybox-image">
 						<i class="fa fa-search-plus"></i>
@@ -48,3 +52,22 @@ if ( $extlinkMeta ) {
 		</div>
 	</div>
 </article>
+<!-- End custom portfolio page -->
+<?php endif;?>
+<?php if (is_page( 'Projetos' ) ):?>	
+<article id="<?php the_ID()?>" <?php post_class( array( "cmo-portfolio-item", "cmo-post-in-list", "cmo-portfolio-width-" . $sizes[0], "cmo-portfolio-height-" . $sizes[1] ) ) ?>>
+	<a href="<?php the_permalink() ?>">
+		<div class="cmo-portfolio-featured-image-wrapper">
+			<div class="cmo-portfolio-featured-image-bg" style="background-image: url('<?php echo esc_url( $cmo_featured_image ) ?>')" >
+				<div class="cmo-pfi-hover">
+									
+				</div>			
+			</div>
+		</div>
+	</a>
+	<a href="<?php the_permalink() ?>">
+		<h3><?php the_title() ?> </h3>
+	</a>
+	<div><?php the_terms( get_the_ID() , 'portfolio_tags', '', ', ', ' ' ); ?></div>
+</article>
+<?php endif;?>

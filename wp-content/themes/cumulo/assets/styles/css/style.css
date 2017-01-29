@@ -3523,7 +3523,7 @@ Primary Use: Cumulo Portfolios
   display: inline-block;
   width: auto;
 }
-#main-container .cmo-portfolio-items-wrapper .cmo-portfolio-featured-image-bg .cmo-pfi-hover:before {
+/*#main-container .cmo-portfolio-items-wrapper .cmo-portfolio-featured-image-bg .cmo-pfi-hover:before {
   position: absolute;
   left: 10px;
   content: '';
@@ -3568,7 +3568,7 @@ Primary Use: Cumulo Portfolios
   -moz-transition: -moz-transform 0.4s ease-in-out;
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
-}
+}*/
 #main-container .cmo-portfolio-items-wrapper .cmo-portfolio-featured-image-bg:hover .cmo-pfi-hover {
   opacity: 1;
 }
